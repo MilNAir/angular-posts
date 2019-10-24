@@ -1,0 +1,17 @@
+
+
+<div class="row post" [ngStyle]="{'background': getBackgroundColor(nbLikePost), 'color': getColor(nbLikePost)}">
+  <div class="subPost">
+    <ul  class="list-group">
+      <div class="post-title-date">
+        <li class="post-title">{{ titlePost }}</li>
+        <li class="post-date">{{ datePost | date: 'short'}}</li>
+      </div>
+      <li class="post-content">{{ contentPost }}</li>
+      <li>Nombre de LoveIts : {{ getNbLikes(nbLikePost) }}</li>
+      <button class="btn btn-like" (click)="addOneLike()">Love it!</button>
+      <button class="btn btn-dont-like" (click)="deleteOneLike()">Don't love it!</button>
+    </ul>
+  </div>
+</div>
+

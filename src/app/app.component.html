@@ -1,0 +1,24 @@
+
+
+<!-- Application Blog -->
+
+
+
+
+<h1>{{titleApp}}</h1>
+
+
+<div class="container">
+
+      <post-list-composant *ngFor="let blog of blogs"
+                     [monTitre]="blog.title"
+                     [titlePost]="blog.title"
+                     [contentPost]="blog.content"
+                     [datePost]="blog.createAt"
+                     [nbLikePost]="blog.loveIts"></post-list-composant>
+    </div>
+
+
+
+
+<router-outlet></router-outlet>
